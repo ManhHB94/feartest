@@ -1,0 +1,40 @@
+EViews Add-in Performs Wooldridge autocorrelation test in Fixed-T Fixed-Effects Models
+Version: 1.0
+Author: Hoang Ba Manh
+Date: 14-Jan-2026
+Support: hbmanh9492@gmail.com
+
+Description:
+This add-in Performs Wooldridge autocorrelation tests in Fixed-T Fixed-Effects Models,
+	these test are robust to system heteroskedasticity
+	as described in Wooldridge (2002, 2010).
+
+Test based on the residuals of:
+- First-difference (FD) model.
+- Fixed Effects (FE) model.
+
+Null hypthesis:
+- FD: Corr(e_it, e_is) = 0 <=> Corr(fd_e_it, fd_e_i(t-1)) = - 0.5
+- FE: Corr(e_it, e_is) = 0 <=> Corr(fe_e_it, fe_e_i(t-1)) = - 1/(T-1)
+
+Requirements:
+- Large-N panel data.
+- Cross-section effects.
+
+Limitations:
+- Not appropriate for small-N panels.
+
+
+Usage:
+Select the Equation object, then run feartest from the add-in menu
+
+References:
+- Wooldridge, J. M. (2002). Econometric analysis of cross section and panel data MIT
+    press. Cambridge, ma, 108(2), 245-254.
+
+- Wooldridge, J. M. (2010). Econometric analysis of cross section and panel data. MIT
+    press.
+
+Disclaimer:
+- This add-in is provided "as is" without any warranty.
+- The author is not responsible for errors or misuse of this software.
